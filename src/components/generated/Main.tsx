@@ -125,14 +125,14 @@ const NavbarComponent = () => {
     };
   }, [isMenuOpen]);
   return <Navbar position="sticky" className="py-3 sm:py-4 md:py-6 text-white" onMenuOpenChange={setIsMenuOpen} data-magicpath-id="4" data-magicpath-path="Main.tsx">
-      <SortableContainer dndKitId="2a5d7df7-8f86-45c5-9ae2-4b747ab82263" containerType="regular" prevTag="div" className="container mx-auto px-4" data-magicpath-id="5" data-magicpath-path="Main.tsx">
-        <SortableContainer dndKitId="2908324f-25a0-420c-96ba-b19903e90b3d" containerType="regular" prevTag="div" className="flex items-center justify-between" data-magicpath-id="6" data-magicpath-path="Main.tsx">
-          <SortableContainer dndKitId="31585c67-9616-4ab6-bfd4-2c0bb6a934f1" containerType="regular" prevTag="div" className="flex items-center" data-magicpath-id="7" data-magicpath-path="Main.tsx">
+      <SortableContainer dndKitId="791a99a7-8f30-4620-871d-77af1babe0e2" containerType="regular" prevTag="div" className="container mx-auto px-4" data-magicpath-id="5" data-magicpath-path="Main.tsx">
+        <SortableContainer dndKitId="41edcf3d-d5c1-4c4b-acf9-1cbc3ff6e1a7" containerType="regular" prevTag="div" className="flex items-center justify-between" data-magicpath-id="6" data-magicpath-path="Main.tsx">
+          <SortableContainer dndKitId="14020d29-441a-46ac-8110-56d0b961875f" containerType="regular" prevTag="div" className="flex items-center" data-magicpath-id="7" data-magicpath-path="Main.tsx">
             <img src="/shed logo.png" className="h-12 sm:h-16 md:h-20 lg:h-28 transition-all duration-300" alt="The Shed Logo" data-magicpath-id="8" data-magicpath-path="Main.tsx" />
           </SortableContainer>
 
           {/* Desktop Menu */}
-          <SortableContainer dndKitId="65c76cac-79d7-4c58-816f-c0105dd6e67f" containerType="collection" prevTag="div" className="hidden md:flex items-center space-x-6 lg:space-x-8" data-magicpath-id="9" data-magicpath-path="Main.tsx">
+          <SortableContainer dndKitId="d161374d-4544-4691-b072-3c248bbf61c6" containerType="collection" prevTag="div" className="hidden md:flex items-center space-x-6 lg:space-x-8" data-magicpath-id="9" data-magicpath-path="Main.tsx">
             {menuItems.map((item, index) => <button key={index} onClick={() => scrollToSection(item.toLowerCase())} className="text-white hover:text-yellow-300 transition-colors duration-300 text-sm lg:text-base font-semibold tracking-wide relative group" data-magicpath-uuid={(item as any)["mpid"] ?? "unsafe"} data-magicpath-id="10" data-magicpath-path="Main.tsx">
                 {item}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-300 to-green-500 group-hover:w-full transition-all duration-300" data-magicpath-uuid={(item as any)["mpid"] ?? "unsafe"} data-magicpath-id="11" data-magicpath-path="Main.tsx" />
@@ -140,8 +140,8 @@ const NavbarComponent = () => {
           </SortableContainer>
 
           {/* Mobile Menu Toggle - Better positioning */}
-          <SortableContainer dndKitId="3d93fd56-4605-42b2-aab0-4d1900f2fa7e" containerType="regular" prevTag="button" className="md:hidden text-white p-2 hover:text-yellow-300 transition-colors relative z-[60]" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} data-magicpath-id="12" data-magicpath-path="Main.tsx">
-            <SortableContainer dndKitId="0d9dea16-8433-4d62-bcde-3b1c38d6a22e" containerType="regular" prevTag="div" className="w-7 h-6 flex flex-col justify-between items-center" data-magicpath-id="13" data-magicpath-path="Main.tsx">
+          <SortableContainer dndKitId="e1fe0ce4-3b35-426f-8d79-3a04c7858321" containerType="regular" prevTag="button" className="md:hidden text-white p-2 hover:text-yellow-300 transition-colors relative z-[60]" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} data-magicpath-id="12" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="e1ac9f45-5b90-4e08-900c-4ce890d3f889" containerType="regular" prevTag="div" className="w-7 h-6 flex flex-col justify-between items-center" data-magicpath-id="13" data-magicpath-path="Main.tsx">
               <span className={cn('w-full h-0.5 bg-current transform transition-all duration-300 ease-in-out origin-center', isMenuOpen ? 'rotate-45 translate-y-[11px]' : '')} data-magicpath-id="14" data-magicpath-path="Main.tsx" />
               <span className={cn('w-full h-0.5 bg-current transition-all duration-300 ease-in-out', isMenuOpen ? 'opacity-0' : 'opacity-100')} data-magicpath-id="15" data-magicpath-path="Main.tsx" />
               <span className={cn('w-full h-0.5 bg-current transform transition-all duration-300 ease-in-out origin-center', isMenuOpen ? '-rotate-45 -translate-y-[11px]' : '')} data-magicpath-id="16" data-magicpath-path="Main.tsx" />
@@ -150,13 +150,13 @@ const NavbarComponent = () => {
         </SortableContainer>
 
         {/* Mobile Menu Overlay */}
-        <div className={cn('fixed inset-0 bg-black/95 backdrop-blur-lg z-40 md:hidden transition-opacity duration-300', isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none')} onClick={() => setIsMenuOpen(false)} data-magicpath-id="17" data-magicpath-path="Main.tsx" />
+        <div className={cn('fixed inset-0 bg-black/80 backdrop-blur-md z-40 md:hidden transition-opacity duration-300', isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none')} onClick={() => setIsMenuOpen(false)} data-magicpath-id="17" data-magicpath-path="Main.tsx" />
 
         {/* Mobile Menu Panel - Full screen with proper padding */}
-        <SortableContainer dndKitId="197dc876-08aa-4bdb-8381-915352c47cee" containerType="regular" prevTag="div" className={cn('fixed top-0 right-0 h-full w-[85vw] max-w-[340px] bg-gradient-to-br from-gray-900 via-black to-gray-900 z-50 md:hidden transition-transform duration-300 ease-out shadow-2xl border-l border-yellow-300/30', isMenuOpen ? 'translate-x-0' : 'translate-x-full')} data-magicpath-id="18" data-magicpath-path="Main.tsx">
-          <SortableContainer dndKitId="6739040a-3e1a-406d-8d84-b7cbc532f649" containerType="regular" prevTag="div" className="flex flex-col h-full pt-24 pb-8 px-6" data-magicpath-id="19" data-magicpath-path="Main.tsx">
+        <SortableContainer dndKitId="96e45e76-badf-4df5-8d04-64817cb431c9" containerType="regular" prevTag="div" className={cn('fixed top-0 right-0 h-full w-[85vw] max-w-[340px] bg-black z-50 md:hidden transition-transform duration-300 ease-out shadow-2xl border-l border-yellow-300/30', isMenuOpen ? 'translate-x-0' : 'translate-x-full')} data-magicpath-id="18" data-magicpath-path="Main.tsx">
+          <SortableContainer dndKitId="d0a5f32d-0917-4c50-b6a0-b08147d0488c" containerType="regular" prevTag="div" className="flex flex-col h-full pt-24 pb-8 px-6" data-magicpath-id="19" data-magicpath-path="Main.tsx">
             {/* Menu Items */}
-            <SortableContainer dndKitId="9b6b92f0-d6b5-4d01-9396-184a06bbdff9" containerType="collection" prevTag="nav" className="flex-1 space-y-3 overflow-y-auto" data-magicpath-id="20" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="e19e845c-27d2-4c20-bda5-5f6c983d85f1" containerType="collection" prevTag="nav" className="flex-1 space-y-3 overflow-y-auto" data-magicpath-id="20" data-magicpath-path="Main.tsx">
               {menuItems.map((item, index) => <button key={index} onClick={() => scrollToSection(item.toLowerCase())} className={cn('w-full text-left px-6 py-4 rounded-xl font-bold text-lg tracking-wide', 'text-white hover:text-black transition-all duration-300', 'hover:bg-gradient-to-r hover:from-yellow-300 hover:to-green-500', 'border border-transparent hover:border-yellow-300/50', 'transform hover:translate-x-2 hover:shadow-lg', 'backdrop-blur-sm')} style={{
               transitionDelay: isMenuOpen ? `${index * 50}ms` : '0ms'
             }} data-magicpath-uuid={(item as any)["mpid"] ?? "unsafe"} data-magicpath-id="21" data-magicpath-path="Main.tsx">
@@ -165,8 +165,8 @@ const NavbarComponent = () => {
             </SortableContainer>
 
             {/* Bottom Decorative Element */}
-            <SortableContainer dndKitId="6ef04c90-56d6-4b9b-a670-48fb73b19ce5" containerType="regular" prevTag="div" className="pt-6 border-t border-white/10 space-y-4" data-magicpath-id="22" data-magicpath-path="Main.tsx">
-              <SortableContainer dndKitId="f45bd436-1d40-49fa-80bc-56db14d37aba" containerType="regular" prevTag="div" className="flex items-center justify-center space-x-4 opacity-60" data-magicpath-id="23" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="b0b82b35-e836-431b-ba0b-ea32a264c3af" containerType="regular" prevTag="div" className="pt-6 border-t border-white/10 space-y-4" data-magicpath-id="22" data-magicpath-path="Main.tsx">
+              <SortableContainer dndKitId="ed4cb7c6-5bff-4201-b1d0-0038e1998531" containerType="regular" prevTag="div" className="flex items-center justify-center space-x-4 opacity-60" data-magicpath-id="23" data-magicpath-path="Main.tsx">
                 <div className="h-px flex-1 bg-gradient-to-r from-transparent to-yellow-300/50" data-magicpath-id="24" data-magicpath-path="Main.tsx" />
                 <Dumbbell className="w-5 h-5 text-yellow-300" data-magicpath-id="25" data-magicpath-path="Main.tsx" />
                 <div className="h-px flex-1 bg-gradient-to-l from-transparent to-green-500/50" data-magicpath-id="26" data-magicpath-path="Main.tsx" />
@@ -179,15 +179,15 @@ const NavbarComponent = () => {
     </Navbar>;
 };
 const MainHero = () => {
-  return <SortableContainer dndKitId="4cbce7bc-f30b-40d1-86c3-430125ad0e23" containerType="regular" prevTag="div" id="home" className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 overflow-hidden" data-magicpath-id="28" data-magicpath-path="Main.tsx">
+  return <SortableContainer dndKitId="a1ba069d-c876-4473-a5b7-c91ef805506e" containerType="regular" prevTag="div" id="home" className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 overflow-hidden" data-magicpath-id="28" data-magicpath-path="Main.tsx">
       {/* Subtle animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-yellow-300/5 via-transparent to-green-500/5 animate-pulse" style={{
       animationDuration: '4s'
     }} data-magicpath-id="29" data-magicpath-path="Main.tsx" />
       
-      <SortableContainer dndKitId="ce1a5958-555c-40aa-b911-584a8635aae0" containerType="regular" prevTag="div" className="container mx-auto px-4 relative z-10" data-magicpath-id="30" data-magicpath-path="Main.tsx">
-        <SortableContainer dndKitId="cd4c82a9-21e3-45e5-984e-777a22971085" containerType="regular" prevTag="div" className="flex flex-col md:flex-row items-center justify-between py-16 lg:py-24 gap-12 max-w-6xl mx-auto" data-magicpath-id="31" data-magicpath-path="Main.tsx">
-          <SortableContainer dndKitId="747870f2-ec6b-44d8-a20a-da398e7f9edf" containerType="regular" prevTag="div" className="flex-1 text-white space-y-8" data-magicpath-id="32" data-magicpath-path="Main.tsx">
+      <SortableContainer dndKitId="f3dde9be-0fce-421f-9339-b42875c14864" containerType="regular" prevTag="div" className="container mx-auto px-4 relative z-10" data-magicpath-id="30" data-magicpath-path="Main.tsx">
+        <SortableContainer dndKitId="c070ac64-f13f-46f3-a61a-1d160b53e5c2" containerType="regular" prevTag="div" className="flex flex-col md:flex-row items-center justify-between py-16 lg:py-24 gap-12 max-w-6xl mx-auto" data-magicpath-id="31" data-magicpath-path="Main.tsx">
+          <SortableContainer dndKitId="5cabad39-acb7-4b0d-b8e4-d517a610ecab" containerType="regular" prevTag="div" className="flex-1 text-white space-y-8" data-magicpath-id="32" data-magicpath-path="Main.tsx">
             <h1 className="text-5xl md:text-6xl lg:text-8xl font-extrabold mb-8 leading-tight tracking-tight" data-magicpath-id="33" data-magicpath-path="Main.tsx">
               WELCOME&nbsp;TO
               <br data-magicpath-id="34" data-magicpath-path="Main.tsx" />
@@ -197,7 +197,7 @@ const MainHero = () => {
             <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-300 max-w-2xl" data-magicpath-id="37" data-magicpath-path="Main.tsx">
               At The Shed, we offer group personal training and personal training on site and online. Each of our workouts are researched, thought out and created with the client's goals and bodies in mind. We believe in building a base and strong body, gradually.
             </p>
-            <SortableContainer dndKitId="c462646e-2c0f-431a-9984-47ea8b3c872f" containerType="regular" prevTag="div" className="flex flex-wrap gap-4 pt-4" data-magicpath-id="38" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="0c6db0d7-0404-42d5-8127-e580322c76d7" containerType="regular" prevTag="div" className="flex flex-wrap gap-4 pt-4" data-magicpath-id="38" data-magicpath-path="Main.tsx">
               <Button onClick={() => {
               const section = document.querySelector('#contact');
               section?.scrollIntoView({
@@ -216,8 +216,8 @@ const MainHero = () => {
               </Button>
             </SortableContainer>
           </SortableContainer>
-          <SortableContainer dndKitId="3272231b-07af-461c-a336-267ea9a364f4" containerType="regular" prevTag="div" className="flex-1 flex justify-center" data-magicpath-id="41" data-magicpath-path="Main.tsx">
-            <SortableContainer dndKitId="35f5aafc-4a8e-492a-b022-7443e74ca6b9" containerType="regular" prevTag="div" className="relative group" data-magicpath-id="42" data-magicpath-path="Main.tsx">
+          <SortableContainer dndKitId="34bd7a0c-4938-4ae9-ad91-738c7f84102b" containerType="regular" prevTag="div" className="flex-1 flex justify-center" data-magicpath-id="41" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="c3e55868-985c-49d9-bebb-beed01610906" containerType="regular" prevTag="div" className="relative group" data-magicpath-id="42" data-magicpath-path="Main.tsx">
               <div className="absolute -inset-1 bg-gradient-to-r from-yellow-300 to-green-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200" data-magicpath-id="43" data-magicpath-path="Main.tsx" />
               <img src="/jenmain.jpg" alt="Lead Trainer" className="relative object-cover rounded-2xl shadow-2xl max-h-[38rem] w-full md:w-auto" data-magicpath-id="44" data-magicpath-path="Main.tsx" />
             </SortableContainer>
@@ -226,28 +226,28 @@ const MainHero = () => {
       </SortableContainer>
 
       {/* Stats Section */}
-      <SortableContainer dndKitId="812efcfe-dbfb-403a-91d4-cb1a8a9e2c93" containerType="regular" prevTag="div" className="container mx-auto px-4 pb-16 relative z-10" data-magicpath-id="45" data-magicpath-path="Main.tsx">
-        <SortableContainer dndKitId="01a24c78-cd73-4415-9f3e-ecbf5e2b4086" containerType="collection" prevTag="div" className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto" data-magicpath-id="46" data-magicpath-path="Main.tsx">
+      <SortableContainer dndKitId="44bb41b1-ddfa-4fc9-80d2-0698a020e73c" containerType="regular" prevTag="div" className="container mx-auto px-4 pb-16 relative z-10" data-magicpath-id="45" data-magicpath-path="Main.tsx">
+        <SortableContainer dndKitId="802345fd-3fea-4c2f-8e98-2081a13ae23b" containerType="collection" prevTag="div" className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto" data-magicpath-id="46" data-magicpath-path="Main.tsx">
           {[{
           icon: Clock,
           label: '24/7 Access',
           value: 'Lockbox',
-          mpid: "9ce403fc-89d9-4d7f-ad94-957da9598296"
+          mpid: "ea72564e-f128-471f-9fd2-c7d752168335"
         }, {
           icon: Users,
           label: 'Personal Training',
           value: 'Group & Solo',
-          mpid: "202d353e-5e00-4245-8a0f-5f799224cdd1"
+          mpid: "a7507090-345b-4ce7-8bf5-42ed348ed20d"
         }, {
           icon: Award,
           label: 'Experience',
           value: '10+ Years',
-          mpid: "ca93b737-dacb-4624-9266-41f175f87b6a"
+          mpid: "bf5cfeb5-d7f4-4b16-9a47-6663d6891b87"
         }, {
           icon: Target,
           label: 'Custom Plans',
           value: 'Your Goals',
-          mpid: "717c77a2-2edf-4705-9f4e-c137298328df"
+          mpid: "04cc6502-ab13-4049-ba1e-063e1ec97af0"
         }].map((stat, index) => <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:border-yellow-300/50 transition-all duration-300 hover:transform hover:scale-105" data-magicpath-uuid={(stat as any)["mpid"] ?? "unsafe"} data-magicpath-id="47" data-magicpath-path="Main.tsx">
               <stat.icon className="w-10 h-10 mx-auto mb-3 text-yellow-300" data-magicpath-uuid={(stat as any)["mpid"] ?? "unsafe"} data-magicpath-id="48" data-magicpath-path="Main.tsx" />
               <div className="text-white font-bold text-lg mb-1" data-magicpath-uuid={(stat as any)["mpid"] ?? "unsafe"} data-magicpath-field="value:unknown" data-magicpath-id="49" data-magicpath-path="Main.tsx">{stat.value}</div>
@@ -278,23 +278,23 @@ const CarouselPlugin = () => {
     }, 3500);
     return () => clearInterval(intervalId);
   }, [emblaApi]);
-  return <SortableContainer dndKitId="60c54803-d459-46c4-9ed3-2c6b05e4be93" containerType="regular" prevTag="div" id="about" className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-20 lg:py-32" data-magicpath-id="51" data-magicpath-path="Main.tsx">
-      <SortableContainer dndKitId="1e57f3d8-1932-44d4-9c0c-9746983774a9" containerType="regular" prevTag="div" className="container mx-auto px-4" data-magicpath-id="52" data-magicpath-path="Main.tsx">
-        <SortableContainer dndKitId="190dbb70-7c75-4462-bb7c-333ef11271fa" containerType="regular" prevTag="div" className="flex flex-col lg:flex-row gap-12 lg:gap-16 max-w-6xl mx-auto" data-magicpath-id="53" data-magicpath-path="Main.tsx">
-          <SortableContainer dndKitId="ae327690-60a4-4259-b08c-790120471f30" containerType="regular" prevTag="div" className="lg:w-1/2 flex flex-col justify-start order-2 lg:order-1 space-y-6" data-magicpath-id="54" data-magicpath-path="Main.tsx">
+  return <SortableContainer dndKitId="8d3ceed6-dcfd-470a-a56e-0a0a67f3993f" containerType="regular" prevTag="div" id="about" className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-20 lg:py-32" data-magicpath-id="51" data-magicpath-path="Main.tsx">
+      <SortableContainer dndKitId="8e80f955-17d2-47a7-a553-7f75ec28cd05" containerType="regular" prevTag="div" className="container mx-auto px-4" data-magicpath-id="52" data-magicpath-path="Main.tsx">
+        <SortableContainer dndKitId="6b8df9ae-5856-4037-86de-24fc84550b7b" containerType="regular" prevTag="div" className="flex flex-col lg:flex-row gap-12 lg:gap-16 max-w-6xl mx-auto" data-magicpath-id="53" data-magicpath-path="Main.tsx">
+          <SortableContainer dndKitId="32c509a2-955a-40e1-92b5-e120ba0f7639" containerType="regular" prevTag="div" className="lg:w-1/2 flex flex-col justify-start order-2 lg:order-1 space-y-6" data-magicpath-id="54" data-magicpath-path="Main.tsx">
             <h1 className="text-4xl lg:text-5xl font-bold text-center lg:text-left" data-magicpath-id="55" data-magicpath-path="Main.tsx">
               ABOUT <span className="text-yellow-300" data-magicpath-id="56" data-magicpath-path="Main.tsx">THE</span> <span className="text-green-500" data-magicpath-id="57" data-magicpath-path="Main.tsx">SHED</span>
             </h1>
             <div className="h-1 w-24 bg-gradient-to-r from-yellow-300 to-green-500 mx-auto lg:mx-0" data-magicpath-id="58" data-magicpath-path="Main.tsx" />
-            <SortableContainer dndKitId="4182cb64-7f22-429d-b336-703f96160814" containerType="regular" prevTag="div" className="space-y-6 text-base lg:text-lg text-gray-300" data-magicpath-id="59" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="f0f4b186-4efa-472f-a33a-f863ec54aac4" containerType="regular" prevTag="div" className="space-y-6 text-base lg:text-lg text-gray-300" data-magicpath-id="59" data-magicpath-path="Main.tsx">
               <p className="leading-relaxed" data-magicpath-id="60" data-magicpath-path="Main.tsx">
                 The Shed is a unique facility where youth and adults gather to workout. The gym is intimate and different than any other in the area and perhaps the nation.
               </p>
-              <SortableContainer dndKitId="55cc7c59-de31-408a-90ec-5ebd85f20554" containerType="regular" prevTag="div" className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 border-l-4 border-yellow-300 p-4 rounded-r-lg" data-magicpath-id="61" data-magicpath-path="Main.tsx">
+              <SortableContainer dndKitId="b72fe345-eca6-4a4f-89bd-af7db84f43ca" containerType="regular" prevTag="div" className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 border-l-4 border-yellow-300 p-4 rounded-r-lg" data-magicpath-id="61" data-magicpath-path="Main.tsx">
                 <p className="text-white font-semibold" data-magicpath-id="62" data-magicpath-path="Main.tsx">Are you an adult training for a race, event or is that on your "bucket list"?</p>
               </SortableContainer>
               <p className="text-center text-xl font-bold text-yellow-300" data-magicpath-id="63" data-magicpath-path="Main.tsx">Or</p>
-              <SortableContainer dndKitId="29e8ffd9-6f17-4a1f-ac86-6be4435ab093" containerType="regular" prevTag="div" className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 border-l-4 border-green-500 p-4 rounded-r-lg" data-magicpath-id="64" data-magicpath-path="Main.tsx">
+              <SortableContainer dndKitId="2b867bba-f625-41c9-965f-530732f99705" containerType="regular" prevTag="div" className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 border-l-4 border-green-500 p-4 rounded-r-lg" data-magicpath-id="64" data-magicpath-path="Main.tsx">
                 <p className="text-white font-semibold" data-magicpath-id="65" data-magicpath-path="Main.tsx">
                   Are you finding that your body is "breaking down", your back, knee or hip is causing you to slow down or even give up activities you love? Our expertise and training background will help you get on track.
                 </p>
@@ -302,11 +302,11 @@ const CarouselPlugin = () => {
             </SortableContainer>
           </SortableContainer>
 
-          <SortableContainer dndKitId="aff3cad8-d40b-4c32-b2c7-8a724d349632" containerType="regular" prevTag="div" className="lg:w-1/2 order-1 lg:order-2" data-magicpath-id="66" data-magicpath-path="Main.tsx">
-            <SortableContainer dndKitId="61c571ec-7400-4a5d-a150-2834926f0098" containerType="regular" prevTag="div" className="relative group" data-magicpath-id="67" data-magicpath-path="Main.tsx">
+          <SortableContainer dndKitId="0b0102b7-b8c9-486e-847b-372a11d97437" containerType="regular" prevTag="div" className="lg:w-1/2 order-1 lg:order-2" data-magicpath-id="66" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="ec1f6a29-499e-4420-848d-65a3c03e73fd" containerType="regular" prevTag="div" className="relative group" data-magicpath-id="67" data-magicpath-path="Main.tsx">
               <div className="absolute -inset-1 bg-gradient-to-r from-yellow-300 to-green-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000" data-magicpath-id="68" data-magicpath-path="Main.tsx" />
-              <SortableContainer dndKitId="bcfd06b4-2771-4171-8444-0b662a98e22a" containerType="regular" prevTag="div" ref={emblaRef} className="relative overflow-hidden rounded-2xl shadow-2xl" data-magicpath-id="69" data-magicpath-path="Main.tsx">
-                <SortableContainer dndKitId="d37ec27e-375a-47a1-bab6-6ea2494a53b4" containerType="collection" prevTag="div" className="flex" data-magicpath-id="70" data-magicpath-path="Main.tsx">
+              <SortableContainer dndKitId="0dcf5574-f224-466e-a184-de9beaf39942" containerType="regular" prevTag="div" ref={emblaRef} className="relative overflow-hidden rounded-2xl shadow-2xl" data-magicpath-id="69" data-magicpath-path="Main.tsx">
+                <SortableContainer dndKitId="208b1e24-3893-4a80-af06-f7ca06815bde" containerType="collection" prevTag="div" className="flex" data-magicpath-id="70" data-magicpath-path="Main.tsx">
                   {imageSources.map((src, index) => <div key={index} className="flex-[0_0_100%] min-w-0" data-magicpath-uuid={(src as any)["mpid"] ?? "unsafe"} data-magicpath-id="71" data-magicpath-path="Main.tsx">
                       <img src={src} alt={`Training session ${index + 1}`} className="w-full h-[350px] md:h-[450px] object-cover" data-magicpath-uuid={(src as any)["mpid"] ?? "unsafe"} data-magicpath-id="72" data-magicpath-path="Main.tsx" />
                     </div>)}
@@ -325,28 +325,28 @@ const CarouselPlugin = () => {
     </SortableContainer>;
 };
 const Trainers = () => {
-  return <SortableContainer dndKitId="cd72bf1e-187c-444c-9abe-28d9e5d3ccf8" containerType="regular" prevTag="div" id="trainers" className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-20 lg:py-32" data-magicpath-id="76" data-magicpath-path="Main.tsx">
-      <SortableContainer dndKitId="8e744495-0134-4c84-a0a0-45da3781da25" containerType="regular" prevTag="div" className="container mx-auto px-4" data-magicpath-id="77" data-magicpath-path="Main.tsx">
-        <SortableContainer dndKitId="c3b6a97d-16d1-44ce-b0de-9686fc555da2" containerType="regular" prevTag="div" className="text-center mb-16" data-magicpath-id="78" data-magicpath-path="Main.tsx">
+  return <SortableContainer dndKitId="4db72b8c-df6b-4e4a-be93-e70017940971" containerType="regular" prevTag="div" id="trainers" className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-20 lg:py-32" data-magicpath-id="76" data-magicpath-path="Main.tsx">
+      <SortableContainer dndKitId="f18d1b4a-2f62-4b8f-bb02-f09498385fcb" containerType="regular" prevTag="div" className="container mx-auto px-4" data-magicpath-id="77" data-magicpath-path="Main.tsx">
+        <SortableContainer dndKitId="f530bf99-0209-4810-bad5-a8315056ece6" containerType="regular" prevTag="div" className="text-center mb-16" data-magicpath-id="78" data-magicpath-path="Main.tsx">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4" data-magicpath-id="79" data-magicpath-path="Main.tsx">
             LEAD <span className="text-yellow-300" data-magicpath-id="80" data-magicpath-path="Main.tsx">TRAINER</span>
           </h1>
           <div className="h-1 w-24 bg-gradient-to-r from-yellow-300 to-green-500 mx-auto" data-magicpath-id="81" data-magicpath-path="Main.tsx" />
         </SortableContainer>
 
-        <SortableContainer dndKitId="dfe9cb5b-399f-4242-a532-6d2c21d2546b" containerType="regular" prevTag="div" className="flex flex-col md:flex-row items-center gap-12 lg:gap-16 max-w-6xl mx-auto" data-magicpath-id="82" data-magicpath-path="Main.tsx">
-          <SortableContainer dndKitId="bfd980b0-8a61-44df-b6ee-6febe5ffb592" containerType="regular" prevTag="div" className="md:w-5/12" data-magicpath-id="83" data-magicpath-path="Main.tsx">
-            <SortableContainer dndKitId="67a453f9-c0e6-4f90-b47a-18f7431bf3b0" containerType="regular" prevTag="div" className="relative group" data-magicpath-id="84" data-magicpath-path="Main.tsx">
+        <SortableContainer dndKitId="4b5fe618-dd37-4fd7-b1d2-346386d7fa09" containerType="regular" prevTag="div" className="flex flex-col md:flex-row items-center gap-12 lg:gap-16 max-w-6xl mx-auto" data-magicpath-id="82" data-magicpath-path="Main.tsx">
+          <SortableContainer dndKitId="cb879e79-b6f9-4223-a0ff-1cb1a7c24b1f" containerType="regular" prevTag="div" className="md:w-5/12" data-magicpath-id="83" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="7470fc81-c02e-4e14-ba71-627adec8b9e9" containerType="regular" prevTag="div" className="relative group" data-magicpath-id="84" data-magicpath-path="Main.tsx">
               <div className="absolute -inset-1 bg-gradient-to-r from-yellow-300 to-green-500 rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000" data-magicpath-id="85" data-magicpath-path="Main.tsx" />
               <img src="/jen.webp" alt="Jen - Lead Trainer" className="relative rounded-xl shadow-2xl w-full" data-magicpath-id="86" data-magicpath-path="Main.tsx" />
             </SortableContainer>
           </SortableContainer>
-          <SortableContainer dndKitId="5d3c34da-40e3-4657-9274-0ad89926c394" containerType="regular" prevTag="div" className="md:w-7/12 space-y-6" data-magicpath-id="87" data-magicpath-path="Main.tsx">
-            <SortableContainer dndKitId="c7b4326e-305c-468c-871c-218d8b5efbcd" containerType="regular" prevTag="div" className="flex items-center gap-4 mb-6" data-magicpath-id="88" data-magicpath-path="Main.tsx">
+          <SortableContainer dndKitId="85efc0b5-3804-4f3c-af33-7ee4f081ebcc" containerType="regular" prevTag="div" className="md:w-7/12 space-y-6" data-magicpath-id="87" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="1eabc191-1182-49b2-b973-898564d0443b" containerType="regular" prevTag="div" className="flex items-center gap-4 mb-6" data-magicpath-id="88" data-magicpath-path="Main.tsx">
               <h2 className="text-3xl lg:text-4xl font-bold" data-magicpath-id="89" data-magicpath-path="Main.tsx">Jen</h2>
               <Award className="w-8 h-8 text-yellow-300" data-magicpath-id="90" data-magicpath-path="Main.tsx" />
             </SortableContainer>
-            <SortableContainer dndKitId="585eeab9-e145-4b0b-83f5-6e75c7c39018" containerType="regular" prevTag="div" className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-white/10 rounded-xl p-6" data-magicpath-id="91" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="4a2b56f9-5b5f-41c1-8e04-5e00f2bca94b" containerType="regular" prevTag="div" className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-white/10 rounded-xl p-6" data-magicpath-id="91" data-magicpath-path="Main.tsx">
               <p className="text-base lg:text-lg text-gray-300 leading-relaxed" data-magicpath-id="92" data-magicpath-path="Main.tsx">
                 "After working 20 plus years in the fitness and health industry and being a competitive runner, triathlete, and tennis player, I knew the benefits of strength training. By adding cross training to my workouts, I was less prone to injury, stronger overall and more successful racing. In 2012, I decided to share my knowledge and experience and opened The Shed, in Sandpoint, Idaho. It was my goal to create an affordable gym for people of all ages, where they could improve their fitness level, receive personal training, workouts designed for their bodies and goals, and be encouraged and supported. Where everyone gets individual attention and is listened to. We don't compete with each other at The Shed, but rather, build each other up. That's what being a ShedHead is all about! As the gym has grown, I've even expanded into online training. Helping people live healthier lives has been and continues to be my mission!"
               </p>
@@ -357,27 +357,27 @@ const Trainers = () => {
     </SortableContainer>;
 };
 const Programs = () => {
-  return <SortableContainer dndKitId="7482e46c-ef8e-4dc7-afc7-e4872a84b521" containerType="regular" prevTag="div" id="programs" className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-20 lg:py-32" data-magicpath-id="93" data-magicpath-path="Main.tsx">
-      <SortableContainer dndKitId="62d6d59f-ffd6-4845-a1c6-24928d44ebe4" containerType="regular" prevTag="div" className="container mx-auto px-4" data-magicpath-id="94" data-magicpath-path="Main.tsx">
-        <SortableContainer dndKitId="c360727b-e8db-4844-bd00-1bb5ac143e16" containerType="regular" prevTag="div" className="text-center mb-16" data-magicpath-id="95" data-magicpath-path="Main.tsx">
+  return <SortableContainer dndKitId="3a799abe-3e87-4c69-95de-d10dab6398be" containerType="regular" prevTag="div" id="programs" className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-20 lg:py-32" data-magicpath-id="93" data-magicpath-path="Main.tsx">
+      <SortableContainer dndKitId="1de4194e-6cf0-46de-b798-306455a9e229" containerType="regular" prevTag="div" className="container mx-auto px-4" data-magicpath-id="94" data-magicpath-path="Main.tsx">
+        <SortableContainer dndKitId="93554837-826f-4c9b-a7e4-144ada97a026" containerType="regular" prevTag="div" className="text-center mb-16" data-magicpath-id="95" data-magicpath-path="Main.tsx">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4" data-magicpath-id="96" data-magicpath-path="Main.tsx">
             OUR <span className="text-green-500" data-magicpath-id="97" data-magicpath-path="Main.tsx">PROGRAMS</span>
           </h1>
           <div className="h-1 w-24 bg-gradient-to-r from-yellow-300 to-green-500 mx-auto" data-magicpath-id="98" data-magicpath-path="Main.tsx" />
         </SortableContainer>
-        <SortableContainer dndKitId="8b4e9a35-6009-4e84-971a-8e51ad0327cd" containerType="collection" prevTag="div" className="flex flex-col lg:flex-row justify-center gap-8 lg:gap-12 max-w-6xl mx-auto" data-magicpath-id="99" data-magicpath-path="Main.tsx">
+        <SortableContainer dndKitId="fc007610-ebdf-4e49-9be9-178063aaaae2" containerType="collection" prevTag="div" className="flex flex-col lg:flex-row justify-center gap-8 lg:gap-12 max-w-6xl mx-auto" data-magicpath-id="99" data-magicpath-path="Main.tsx">
           {[{
           image: '/adultp.jpeg',
           title: 'Adult Programs',
           description: 'At the Shed, we offer group personal training for Adults. Each workout is specifically designed to address the client\'s needs, whether you are an athlete wishing to cross train for your sport, prepare physically for a race/event; work on gait or core strength; or a client desiring inch loss; or have special needs: MS, paralysis, prosthetics. We look forward to helping you reach your goals.',
           icon: Dumbbell,
-          mpid: "01e94cf9-be58-4df0-86c5-30d9637864c6"
+          mpid: "84bab50f-c3a9-4da8-b2fc-04b882e322a2"
         }, {
           image: '/adult.jpeg',
           title: 'Online Training',
           description: 'I offer online fitness training, and it\'s affordable! I am working with people as far away as NY and as close as Upper Pack River and Spokane! If you need support, a plan, guidance, I am here for you. Workouts are written based on your goals, body, and available equipment. Together, we can make it work and take the stress out of finding the time to go to the gym!',
           icon: Zap,
-          mpid: "2493b125-6757-4b12-833a-15163e685109"
+          mpid: "640a38d0-82ab-4229-8a78-7a83c2fa18bf"
         }].map((program, index) => <div key={index} className="flex-1 group" data-magicpath-uuid={(program as any)["mpid"] ?? "unsafe"} data-magicpath-id="100" data-magicpath-path="Main.tsx">
               <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-yellow-300/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl" data-magicpath-uuid={(program as any)["mpid"] ?? "unsafe"} data-magicpath-id="101" data-magicpath-path="Main.tsx">
                 <div className="relative w-full aspect-[4/3] overflow-hidden" data-magicpath-uuid={(program as any)["mpid"] ?? "unsafe"} data-magicpath-id="102" data-magicpath-path="Main.tsx">
@@ -402,37 +402,37 @@ const Programs = () => {
     </SortableContainer>;
 };
 const Rates = () => {
-  return <SortableContainer dndKitId="a9380a22-a2fb-4243-b059-3f89bd180a7f" containerType="regular" prevTag="div" id="rates" className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-20 lg:py-32" data-magicpath-id="110" data-magicpath-path="Main.tsx">
-      <SortableContainer dndKitId="75de2204-04a6-43c9-a9e5-ae7fd317c43f" containerType="regular" prevTag="div" className="container mx-auto px-4" data-magicpath-id="111" data-magicpath-path="Main.tsx">
-        <SortableContainer dndKitId="40d5b122-6c86-4d50-acf8-28d1c2e5c7d3" containerType="regular" prevTag="div" className="text-center mb-16" data-magicpath-id="112" data-magicpath-path="Main.tsx">
+  return <SortableContainer dndKitId="3d876c75-c1b8-4d47-a2aa-6d3bdeae553c" containerType="regular" prevTag="div" id="rates" className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-20 lg:py-32" data-magicpath-id="110" data-magicpath-path="Main.tsx">
+      <SortableContainer dndKitId="1bd1ae50-e55e-4a66-abe7-37474d3fa43f" containerType="regular" prevTag="div" className="container mx-auto px-4" data-magicpath-id="111" data-magicpath-path="Main.tsx">
+        <SortableContainer dndKitId="56dab724-a6bc-4942-97c2-a68d47d797e2" containerType="regular" prevTag="div" className="text-center mb-16" data-magicpath-id="112" data-magicpath-path="Main.tsx">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4" data-magicpath-id="113" data-magicpath-path="Main.tsx">
             <span className="text-yellow-300" data-magicpath-id="114" data-magicpath-path="Main.tsx">RATES</span>
           </h1>
           <div className="h-1 w-24 bg-gradient-to-r from-yellow-300 to-green-500 mx-auto" data-magicpath-id="115" data-magicpath-path="Main.tsx" />
         </SortableContainer>
-        <SortableContainer dndKitId="a5085d60-8141-4db7-a26f-92892e86aa4b" containerType="regular" prevTag="div" className="max-w-3xl mx-auto" data-magicpath-id="116" data-magicpath-path="Main.tsx">
-          <SortableContainer dndKitId="9eaa3946-0b24-4675-ae7b-cccda57dd5f9" containerType="regular" prevTag="div" className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 lg:p-12 shadow-2xl hover:border-yellow-300/30 transition-all duration-500" data-magicpath-id="117" data-magicpath-path="Main.tsx">
-            <SortableContainer dndKitId="06a04373-e5da-4a1b-a304-d314e0b83ceb" containerType="collection" prevTag="div" className="grid gap-6" data-magicpath-id="118" data-magicpath-path="Main.tsx">
+        <SortableContainer dndKitId="74a4d8a1-d692-4a2e-8296-a9f4ea83acd4" containerType="regular" prevTag="div" className="max-w-3xl mx-auto" data-magicpath-id="116" data-magicpath-path="Main.tsx">
+          <SortableContainer dndKitId="6e4219d5-dddd-43b7-870a-515c8d5dfb3e" containerType="regular" prevTag="div" className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 lg:p-12 shadow-2xl hover:border-yellow-300/30 transition-all duration-500" data-magicpath-id="117" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="74d6b00c-a0f6-4cbc-aca6-95ed1d22f8fe" containerType="collection" prevTag="div" className="grid gap-6" data-magicpath-id="118" data-magicpath-path="Main.tsx">
               {[{
               label: 'Basic gym membership',
               price: '$50/month',
               icon: Dumbbell,
-              mpid: "3ba66104-9bf3-489e-86cd-ef302ae692ea"
+              mpid: "d95343cc-e2d2-4f75-a24e-4400593a427a"
             }, {
               label: 'Two sessions a week with training',
               price: '$85/month',
               icon: Users,
-              mpid: "edba0595-6634-4369-9db4-b22b58549074"
+              mpid: "19b03382-7334-4d71-8d42-e51ca717d1f9"
             }, {
               label: 'Three to Four sessions a week with training',
               price: '$125/month',
               icon: Award,
-              mpid: "a6836764-e755-4abb-80e8-234cfb9d812c"
+              mpid: "cccf87cf-46c1-4946-b463-183665c14c10"
             }, {
               label: 'Online Training',
               price: '$85/month',
               icon: Zap,
-              mpid: "b20a98e0-6371-484b-b3f7-3d00e511062e"
+              mpid: "38ef326f-7dad-470a-8762-74fa6b606dfd"
             }].map((rate, index) => <div key={index} className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-gray-700/20 to-gray-800/20 hover:from-gray-700/40 hover:to-gray-800/40 transition-all duration-300 group" data-magicpath-uuid={(rate as any)["mpid"] ?? "unsafe"} data-magicpath-id="119" data-magicpath-path="Main.tsx">
                   <div className="flex items-center gap-4 flex-1" data-magicpath-uuid={(rate as any)["mpid"] ?? "unsafe"} data-magicpath-id="120" data-magicpath-path="Main.tsx">
                     <div className="bg-gradient-to-r from-yellow-300 to-green-500 p-2 rounded-lg" data-magicpath-uuid={(rate as any)["mpid"] ?? "unsafe"} data-magicpath-id="121" data-magicpath-path="Main.tsx">
@@ -445,7 +445,7 @@ const Rates = () => {
                   </span>
                 </div>)}
             </SortableContainer>
-            <SortableContainer dndKitId="ec0bba18-4e4e-4d93-a65e-75b4dad5cd1e" containerType="regular" prevTag="div" className="mt-8 pt-8 border-t border-white/10" data-magicpath-id="125" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="e7d3ef16-a124-4e86-b858-69a66b552b01" containerType="regular" prevTag="div" className="mt-8 pt-8 border-t border-white/10" data-magicpath-id="125" data-magicpath-path="Main.tsx">
               <p className="text-base lg:text-lg text-gray-400 text-center leading-relaxed" data-magicpath-id="126" data-magicpath-path="Main.tsx">
                 All memberships include <span className="text-yellow-300 font-semibold" data-magicpath-id="127" data-magicpath-path="Main.tsx">24/7 lockbox access</span> to the gym. <span className="text-green-500 font-semibold" data-magicpath-id="128" data-magicpath-path="Main.tsx">Family discounts</span> available. There is <span className="text-white font-semibold" data-magicpath-id="129" data-magicpath-path="Main.tsx">no contract or sign-up fee</span>.
               </p>
@@ -459,31 +459,31 @@ const TrainingHours = () => {
   const hours = [{
     day: 'Monday',
     time: '7am - 12pm',
-    mpid: "d402b0a0-e3ed-4242-a407-b4ac1ea1c7cd"
+    mpid: "3eb8cff1-bd0f-44aa-ad0c-08c1f2f3e29d"
   }, {
     day: 'Tuesday',
     time: '7am - 12pm',
-    mpid: "2b3b5abd-9dde-4905-8ab6-a7d07ac1f41b"
+    mpid: "d5576c00-a7e7-4f1b-9673-3bacf9746af4"
   }, {
     day: 'Thursday',
     time: '7am - 12pm',
-    mpid: "4de9d36d-4873-4057-95d1-97c516607da3"
+    mpid: "738b2195-a5a1-4ea3-80b8-bded427735a3"
   }, {
     day: 'Friday',
     time: '7am - 12pm',
-    mpid: "c0c64035-011f-4f03-9b31-9a6ffcdf0fa8"
+    mpid: "0ee20847-0dd5-4b7f-8447-cc17cd9a8c35"
   }] as any[];
-  return <SortableContainer dndKitId="a8ffd55b-fde4-4745-afc8-dd7bc97c6129" containerType="regular" prevTag="div" id="hours" className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-20 lg:py-32" data-magicpath-id="130" data-magicpath-path="Main.tsx">
-      <SortableContainer dndKitId="d6f12dad-01e2-4883-afef-823216a2f650" containerType="regular" prevTag="div" className="container mx-auto px-4" data-magicpath-id="131" data-magicpath-path="Main.tsx">
-        <SortableContainer dndKitId="79ca1ab9-2e3f-44c1-bd0e-f68529266935" containerType="regular" prevTag="div" className="text-center mb-16" data-magicpath-id="132" data-magicpath-path="Main.tsx">
+  return <SortableContainer dndKitId="5a259398-9493-4079-be36-a4a9ed323ed3" containerType="regular" prevTag="div" id="hours" className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-20 lg:py-32" data-magicpath-id="130" data-magicpath-path="Main.tsx">
+      <SortableContainer dndKitId="b8e5591f-6999-43f3-bd83-d0a2c6ee57fc" containerType="regular" prevTag="div" className="container mx-auto px-4" data-magicpath-id="131" data-magicpath-path="Main.tsx">
+        <SortableContainer dndKitId="d26dd5e1-c6f1-4e12-86c9-87122e10ba14" containerType="regular" prevTag="div" className="text-center mb-16" data-magicpath-id="132" data-magicpath-path="Main.tsx">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4" data-magicpath-id="133" data-magicpath-path="Main.tsx">
             <span className="text-green-500" data-magicpath-id="134" data-magicpath-path="Main.tsx">TRAINING HOURS</span>
           </h1>
           <div className="h-1 w-24 bg-gradient-to-r from-yellow-300 to-green-500 mx-auto" data-magicpath-id="135" data-magicpath-path="Main.tsx" />
         </SortableContainer>
-        <SortableContainer dndKitId="e21aa110-7630-4337-bc07-5cef81ea63ea" containerType="regular" prevTag="div" className="max-w-2xl mx-auto" data-magicpath-id="136" data-magicpath-path="Main.tsx">
-          <SortableContainer dndKitId="36056fdb-3989-476b-92c9-acbd9df5efb1" containerType="regular" prevTag="div" className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 lg:p-12 shadow-2xl" data-magicpath-id="137" data-magicpath-path="Main.tsx">
-            <SortableContainer dndKitId="aae836c4-5cfa-4b66-a815-0fae20502da2" containerType="collection" prevTag="div" className="space-y-4" data-magicpath-id="138" data-magicpath-path="Main.tsx">
+        <SortableContainer dndKitId="34d37bfe-1b3d-4b4a-9177-0f27b6383765" containerType="regular" prevTag="div" className="max-w-2xl mx-auto" data-magicpath-id="136" data-magicpath-path="Main.tsx">
+          <SortableContainer dndKitId="50d26ca0-6302-4f80-9c08-009ac67d9ca3" containerType="regular" prevTag="div" className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 lg:p-12 shadow-2xl" data-magicpath-id="137" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="2fbf6e7b-2f86-4173-be96-8895242119af" containerType="collection" prevTag="div" className="space-y-4" data-magicpath-id="138" data-magicpath-path="Main.tsx">
               {hours.map((schedule, index) => <div key={index} className="flex items-center justify-between p-5 rounded-xl bg-gradient-to-r from-gray-700/30 to-gray-800/30 hover:from-gray-700/50 hover:to-gray-800/50 transition-all duration-300 group" data-magicpath-uuid={(schedule as any)["mpid"] ?? "unsafe"} data-magicpath-id="139" data-magicpath-path="Main.tsx">
                   <div className="flex items-center gap-4" data-magicpath-uuid={(schedule as any)["mpid"] ?? "unsafe"} data-magicpath-id="140" data-magicpath-path="Main.tsx">
                     <Clock className="w-6 h-6 text-green-500 group-hover:text-yellow-300 transition-colors" data-magicpath-uuid={(schedule as any)["mpid"] ?? "unsafe"} data-magicpath-id="141" data-magicpath-path="Main.tsx" />
@@ -492,7 +492,7 @@ const TrainingHours = () => {
                   <span className="text-lg lg:text-xl font-bold text-gray-300 group-hover:text-white transition-colors" data-magicpath-uuid={(schedule as any)["mpid"] ?? "unsafe"} data-magicpath-field="time:unknown" data-magicpath-id="143" data-magicpath-path="Main.tsx">{schedule.time}</span>
                 </div>)}
             </SortableContainer>
-            <SortableContainer dndKitId="4cde6b96-d4af-4366-b433-2ea004fe4251" containerType="regular" prevTag="div" className="mt-8 pt-8 border-t border-white/10 text-center" data-magicpath-id="144" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="d130231c-2e85-443b-9bbe-f7755a77838f" containerType="regular" prevTag="div" className="mt-8 pt-8 border-t border-white/10 text-center" data-magicpath-id="144" data-magicpath-path="Main.tsx">
               <p className="text-gray-400 text-base" data-magicpath-id="145" data-magicpath-path="Main.tsx">
                 <Clock className="w-5 h-5 inline mr-2 text-yellow-300" data-magicpath-id="146" data-magicpath-path="Main.tsx" />
                 Remember: Members have <span className="text-yellow-300 font-semibold" data-magicpath-id="147" data-magicpath-path="Main.tsx">24/7 access</span> to the gym
@@ -508,12 +508,12 @@ const Contact = () => {
   const handleContactClick = () => {
     window.location.href = 'mailto:jenattheshed@gmail.com';
   };
-  return <SortableContainer dndKitId="0c40d7f6-1320-4a54-a7fe-e6c8c39298cd" containerType="regular" prevTag="div" id="contact" className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-20 lg:py-32" data-magicpath-id="148" data-magicpath-path="Main.tsx">
+  return <SortableContainer dndKitId="030f5ec4-f29b-46f4-96e6-d236464b4e57" containerType="regular" prevTag="div" id="contact" className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-20 lg:py-32" data-magicpath-id="148" data-magicpath-path="Main.tsx">
       <div className="absolute inset-0 bg-gradient-to-br from-yellow-300/5 via-transparent to-green-500/5" data-magicpath-id="149" data-magicpath-path="Main.tsx" />
-      <SortableContainer dndKitId="23fc3e78-1eb0-404f-8f81-b9b27d00e1a2" containerType="regular" prevTag="div" className="container mx-auto px-4 relative z-10" data-magicpath-id="150" data-magicpath-path="Main.tsx">
-        <SortableContainer dndKitId="87de1cc8-5a6a-4b27-8ca0-3ec8f2515fd9" containerType="regular" prevTag="div" className="max-w-4xl mx-auto" data-magicpath-id="151" data-magicpath-path="Main.tsx">
-          <SortableContainer dndKitId="fd5398c8-a817-4c0b-a09a-d4b23c1ecfa0" containerType="regular" prevTag="div" className="text-center space-y-8" data-magicpath-id="152" data-magicpath-path="Main.tsx">
-            <SortableContainer dndKitId="8d7cb2b5-b669-4649-8fac-a24484b29ffd" containerType="regular" prevTag="div" data-magicpath-id="153" data-magicpath-path="Main.tsx">
+      <SortableContainer dndKitId="17c44ebc-9753-4fd9-aafd-982f45c4cae2" containerType="regular" prevTag="div" className="container mx-auto px-4 relative z-10" data-magicpath-id="150" data-magicpath-path="Main.tsx">
+        <SortableContainer dndKitId="294d0e4a-3c0f-4c75-b731-98ca432074a4" containerType="regular" prevTag="div" className="max-w-4xl mx-auto" data-magicpath-id="151" data-magicpath-path="Main.tsx">
+          <SortableContainer dndKitId="5fb22adf-ad35-4469-ab23-48a0181ba7e8" containerType="regular" prevTag="div" className="text-center space-y-8" data-magicpath-id="152" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="bad9b5bc-ec90-48cc-ba67-d2d1cef94935" containerType="regular" prevTag="div" data-magicpath-id="153" data-magicpath-path="Main.tsx">
               <h2 className="text-3xl lg:text-5xl font-bold mb-4" data-magicpath-id="154" data-magicpath-path="Main.tsx">
                 Ready to Start Your <span className="text-yellow-300" data-magicpath-id="155" data-magicpath-path="Main.tsx">Fitness</span> <span className="text-green-500" data-magicpath-id="156" data-magicpath-path="Main.tsx">Journey?</span>
               </h2>
@@ -522,13 +522,13 @@ const Contact = () => {
             <p className="text-lg lg:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto" data-magicpath-id="158" data-magicpath-path="Main.tsx">
               Got questions or ready to join? Email us today and take the first step toward your fitness goals!
             </p>
-            <SortableContainer dndKitId="60a0484f-ca68-4bb4-b704-c919edcb5432" containerType="regular" prevTag="div" className="pt-8" data-magicpath-id="159" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="12660934-3ed5-4005-9eeb-39ac4d823c1b" containerType="regular" prevTag="div" className="pt-8" data-magicpath-id="159" data-magicpath-path="Main.tsx">
               <Button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onClick={handleContactClick} className={cn('text-white font-bold text-xl px-12 py-8 rounded-full transition-all duration-500 transform', isHovered ? 'bg-gradient-to-r from-yellow-300 to-green-500 text-black border-transparent shadow-2xl scale-110' : 'bg-transparent border-2 border-white hover:scale-105')} data-magicpath-id="160" data-magicpath-path="Main.tsx">
                 <Mail className="mr-3 h-6 w-6" data-magicpath-id="161" data-magicpath-path="Main.tsx" />
                 Contact Us Today
               </Button>
             </SortableContainer>
-            <SortableContainer dndKitId="1f84bc3c-ec7c-4a61-bca1-defc63aba613" containerType="regular" prevTag="div" className="pt-8 text-gray-400" data-magicpath-id="162" data-magicpath-path="Main.tsx">
+            <SortableContainer dndKitId="2facfe88-676f-47c9-aaad-33ab747bc238" containerType="regular" prevTag="div" className="pt-8 text-gray-400" data-magicpath-id="162" data-magicpath-path="Main.tsx">
               <p className="text-base" data-magicpath-id="163" data-magicpath-path="Main.tsx">jenattheshed@gmail.com</p>
             </SortableContainer>
           </SortableContainer>
@@ -537,12 +537,12 @@ const Contact = () => {
     </SortableContainer>;
 };
 const Footer = () => {
-  return <SortableContainer dndKitId="cdc35515-d650-4749-b8f4-f58f3648f5f2" containerType="regular" prevTag="footer" className="bg-black text-white py-12 border-t border-white/10" data-magicpath-id="164" data-magicpath-path="Main.tsx">
-      <SortableContainer dndKitId="c19cf163-343d-4567-b5e4-2f13e6df4a05" containerType="regular" prevTag="div" className="container mx-auto px-4" data-magicpath-id="165" data-magicpath-path="Main.tsx">
-        <SortableContainer dndKitId="d4728901-3471-4af8-a55b-db60df59ef66" containerType="regular" prevTag="div" className="flex flex-col items-center justify-center space-y-8" data-magicpath-id="166" data-magicpath-path="Main.tsx">
+  return <SortableContainer dndKitId="a46a7a2c-aa75-4281-9dbd-06e55285100e" containerType="regular" prevTag="footer" className="bg-black text-white py-12 border-t border-white/10" data-magicpath-id="164" data-magicpath-path="Main.tsx">
+      <SortableContainer dndKitId="b32384df-b035-4a8a-9ffa-c4c848c6c81b" containerType="regular" prevTag="div" className="container mx-auto px-4" data-magicpath-id="165" data-magicpath-path="Main.tsx">
+        <SortableContainer dndKitId="781518ad-e7c5-4fc1-a16c-3c4e9986ce97" containerType="regular" prevTag="div" className="flex flex-col items-center justify-center space-y-8" data-magicpath-id="166" data-magicpath-path="Main.tsx">
           <img src="/shed logo.png" className="h-16 opacity-80" alt="The Shed Logo" data-magicpath-id="167" data-magicpath-path="Main.tsx" />
           
-          <SortableContainer dndKitId="4f57eabc-89cb-4e01-b9b5-769fb92db448" containerType="regular" prevTag="div" className="flex space-x-6" data-magicpath-id="168" data-magicpath-path="Main.tsx">
+          <SortableContainer dndKitId="3b822b33-5957-45bb-8daa-ac83f9257612" containerType="regular" prevTag="div" className="flex space-x-6" data-magicpath-id="168" data-magicpath-path="Main.tsx">
             <a href="https://www.instagram.com/theshedsandpoint/" target="_blank" rel="noopener noreferrer" className="group relative" aria-label="Instagram" data-magicpath-id="169" data-magicpath-path="Main.tsx">
               <div className="absolute -inset-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full blur opacity-0 group-hover:opacity-50 transition duration-500" data-magicpath-id="170" data-magicpath-path="Main.tsx" />
               <Instagram className="relative w-10 h-10 text-pink-500 group-hover:text-pink-400 transition-all duration-300 group-hover:scale-110" data-magicpath-id="171" data-magicpath-path="Main.tsx" />
@@ -553,7 +553,7 @@ const Footer = () => {
             </a>
           </SortableContainer>
 
-          <SortableContainer dndKitId="856473a3-bf5b-46f5-9682-d6ea70c049bc" containerType="regular" prevTag="div" className="flex flex-col items-center space-y-2" data-magicpath-id="175" data-magicpath-path="Main.tsx">
+          <SortableContainer dndKitId="2a769644-51d8-48ef-93ee-8612da0f5df5" containerType="regular" prevTag="div" className="flex flex-col items-center space-y-2" data-magicpath-id="175" data-magicpath-path="Main.tsx">
             <div className="h-px w-32 bg-gradient-to-r from-transparent via-white/20 to-transparent" data-magicpath-id="176" data-magicpath-path="Main.tsx" />
             <p className="text-gray-400 text-sm" data-magicpath-id="177" data-magicpath-path="Main.tsx">
               &copy; {new Date().getFullYear()} The Shed. All rights reserved.
@@ -567,7 +567,7 @@ const Footer = () => {
 
 // @component: Main
 export const Main = () => {
-  return <SortableContainer dndKitId="113fc9c9-1cb5-4d85-a788-7b95e58b713e" containerType="regular" prevTag="main" className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900" data-magicpath-id="179" data-magicpath-path="Main.tsx">
+  return <SortableContainer dndKitId="13800840-6f44-423f-86a1-7521a4970143" containerType="regular" prevTag="main" className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900" data-magicpath-id="179" data-magicpath-path="Main.tsx">
       <NavbarComponent data-magicpath-id="180" data-magicpath-path="Main.tsx" />
       <MainHero data-magicpath-id="181" data-magicpath-path="Main.tsx" />
       <CarouselPlugin data-magicpath-id="182" data-magicpath-path="Main.tsx" />
