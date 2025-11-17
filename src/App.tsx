@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { Container, Theme } from './settings/types';
-import { Main } from './components/generated/Main';
+import { Main } from './components/Main';
 
 let theme: Theme = 'light';
 // only use 'centered' container for standalone components, never for full page apps or websites.
