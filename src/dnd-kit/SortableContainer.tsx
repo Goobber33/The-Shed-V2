@@ -349,15 +349,16 @@ export const SortableContainer = memo(
               ref,
             },
             <ParentIdContext.Provider value={containerId}>
-              {/* @ts-expect-error - React 19 type compatibility issue with dnd-kit */}
-              <SortableContext
-                id={containerId}
-                disabled={!isEditMode}
-                items={childIds}
-                strategy={sortingStrategyMappers[sortingStrategy || SORTING_STRAGETY.HORIZONTAL]}
-              >
-                {content}
-              </SortableContext>
+              {React.createElement(
+                SortableContext as any,
+                {
+                  id: containerId,
+                  disabled: !isEditMode,
+                  items: childIds,
+                  strategy: sortingStrategyMappers[sortingStrategy || SORTING_STRAGETY.HORIZONTAL],
+                },
+                content
+              )}
             </ParentIdContext.Provider>
           );
         },
