@@ -90,12 +90,15 @@ export function RootDnd({ children }: { children: React.ReactNode }) {
       collisionDetection={customCollisionDetector}
     >
       {children}
+      {/* @ts-expect-error - React 19 type compatibility issue with dnd-kit */}
       <DragOverlay
-        modifiers={[snapCenterToCursor]}
-        style={{
-          cursor: 'grabbing',
-          opacity: 0.8,
-        }}
+        {...({
+          modifiers: [snapCenterToCursor],
+          style: {
+            cursor: 'grabbing',
+            opacity: 0.8,
+          },
+        } as any)}
       >
         {activeItem && isOutsideOfContainer && activeItem.type !== 'template'
           ? cloneElement(activeItem.node as React.ReactElement, {
